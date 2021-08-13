@@ -23,7 +23,7 @@ export default function StateOrder() {
     return () => {
       return setOrder(false);
     };
-  }, []);
+  }, [orderId]);
 
   return (
     <SEO title="State Order">
