@@ -1,0 +1,34 @@
+.one-news {
+  width: 100%;
+  min-height: 100vh;
+  padding: 2rem;
+}
+
+.one-news .view-img {
+  width: 400px;
+  max-height: 250px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.one-news .view-img img {
+  width: 100%;
+}
+
+.one-news .wrapper-news {
+  padding: 1rem;
+}
+
+.one-news .wrapper-news h3,
+.one-news .wrapper-news h6,
+.one-news .wrapper-news .content-news {
+  line-height: 1.7;
+  margin: 2rem 0;
+}
+
+.one-news .wrapper-news h6 {
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 16px;
+}
+/*# sourceMappingURL=ViewOneNews.css.map */

@@ -1,0 +1,344 @@
+.overview {
+  width: 100%;
+  height: 100vh;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (0.5fr)[2];
+      grid-template-columns: repeat(2, 0.5fr);
+  -ms-grid-rows: 1fr !important;
+      grid-template-rows: 1fr !important;
+      grid-template-areas: "content img";
+  padding: 3rem;
+}
+
+.overview .content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  justify-items: center;
+  padding: 1rem;
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: content;
+}
+
+.overview .content h3 {
+  margin: 1rem 0;
+}
+
+.overview .content p {
+  word-spacing: 4px;
+  word-break: break-all;
+}
+
+.overview .content ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: 1rem 0;
+}
+
+.overview .content ul li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  margin: 1rem 0;
+}
+
+.overview .container-img {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  justify-items: center;
+  overflow: hidden;
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: img;
+}
+
+.overview .container-img img {
+  width: 100%;
+  height: auto;
+}
+
+.features-performance {
+  width: 100%;
+  height: 100vh;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  -ms-grid-rows: (170px 1fr)[2];
+      grid-template-rows: repeat(2, 170px 1fr);
+  background-color: #fc846b;
+}
+
+.features-performance .head-of-feat {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.features-performance .head-of-feat h6,
+.features-performance .head-of-feat h3 {
+  text-transform: capitalize;
+}
+
+.features-performance .head-of-feat h6 {
+  font-size: 22px;
+}
+
+.features-performance .head-of-feat h3 {
+  font-size: 32px;
+  color: #fc846b;
+}
+
+.features-performance .boxes-feat {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (0.5fr)[2];
+      grid-template-columns: repeat(2, 0.5fr);
+  -ms-grid-rows: (0.5fr)[2];
+      grid-template-rows: repeat(2, 0.5fr);
+  grid-column-gap: 8px;
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 3;
+  grid-row: 2/5;
+  padding: 1rem;
+}
+
+.features-performance .boxes-feat .one-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+}
+
+.features-performance .boxes-feat .one-box:nth-of-type(1), .features-performance .boxes-feat .one-box:nth-of-type(3) {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+}
+
+.features-performance .boxes-feat .one-box div:nth-of-type(1) {
+  font-size: 32px;
+}
+
+.features-performance .boxes-feat .one-box div:nth-of-type(1) span {
+  background-color: #fff;
+  color: #fc846b;
+  padding: 1rem;
+}
+
+.features-performance .boxes-feat .one-box div h4,
+.features-performance .boxes-feat .one-box div p {
+  padding: 0 1rem;
+  color: #fff;
+}
+
+.features-performance .boxes-feat .one-box div h4 {
+  text-transform: capitalize;
+  margin-bottom: 0.5rem;
+}
+
+.simply {
+  width: 100%;
+  height: 100vh;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  -ms-grid-rows: 220px 1fr;
+      grid-template-rows: 220px 1fr;
+}
+
+.simply .head-of-simply {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.simply .head-of-simply h6,
+.simply .head-of-simply h3 {
+  text-transform: capitalize;
+}
+
+.simply .head-of-simply h6 {
+  font-size: 32px;
+}
+
+.simply .head-of-simply h3 {
+  font-size: 38px;
+  color: #fc846b;
+}
+
+.simply .wrapper-simply {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (33.33%)[3];
+      grid-template-columns: repeat(3, 33.33%);
+  -ms-grid-rows: 1fr;
+      grid-template-rows: 1fr;
+}
+
+.simply .wrapper-simply .content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.simply .wrapper-simply .content h6 {
+  font-size: 22px;
+  margin-bottom: 1rem;
+}
+
+.simply .wrapper-simply .content p {
+  font-size: 22px;
+  line-height: 1.7;
+}
+
+.simply .wrapper-simply div {
+  padding: 0.5rem;
+}
+
+.simply .wrapper-simply div img {
+  width: 100%;
+  border-radius: 0.25rem;
+}
+
+.simply .wrapper-simply div .list-options {
+  list-style-type: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 1.5rem;
+}
+
+.simply .wrapper-simply div .list-options li {
+  margin: 1rem 0;
+}
+
+.simply .wrapper-simply div .list-options li span:nth-of-type(1) {
+  margin-right: 1rem;
+  color: #fc846b;
+}
+
+.simply .wrapper-simply div .list-options li span:nth-of-type(2) {
+  text-transform: capitalize;
+}
+
+@media (max-width: 576px) {
+  .overview {
+    height: 200vh;
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    -ms-grid-rows: (1fr)[2];
+        grid-template-rows: repeat(2, 1fr);
+        grid-template-areas: "img" "content";
+  }
+  .features-performance {
+    height: 200vh;
+  }
+  .features-performance .boxes-feat {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    -ms-grid-rows: (0.5fr)[4];
+        grid-template-rows: repeat(4, 0.5fr);
+  }
+  .features-performance .boxes-feat .one-box:nth-of-type(1), .features-performance .boxes-feat .one-box:nth-of-type(3) {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  .simply .wrapper-simply {
+    height: 150vh;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    -ms-grid-rows: (0.5fr)[3];
+        grid-template-rows: repeat(3, 0.5fr);
+  }
+}
+
+@media (min-width: 576.5px) and (max-width: 767px) {
+  .features-performance {
+    height: 200vh;
+  }
+  .features-performance .boxes-feat {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    -ms-grid-rows: (0.5fr)[4];
+        grid-template-rows: repeat(4, 0.5fr);
+  }
+  .features-performance .boxes-feat .one-box:nth-of-type(1), .features-performance .boxes-feat .one-box:nth-of-type(3) {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  .simply .wrapper-simply {
+    height: 150vh;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    -ms-grid-rows: (0.5fr)[3];
+        grid-template-rows: repeat(3, 0.5fr);
+  }
+}
+/*# sourceMappingURL=Services.css.map */

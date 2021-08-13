@@ -1,0 +1,131 @@
+@import "../css/variables.scss";
+
+.cart {
+  width: 100%;
+  min-height: 100vh;
+  padding: 1rem;
+  h3 {
+    text-align: center;
+    margin: 3rem 0;
+    text-decoration-line: underline;
+    text-decoration-style: wavy;
+    text-decoration-color: rgb(255, 169, 169);
+    padding: 0.5rem;
+  }
+
+  .one-item-cart {
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    min-height: 175px;
+
+    .img-item-cart {
+      width: 33%;
+      display: flex;
+      justify-content: center;
+      img {
+        width: 110px;
+        height: 100px;
+      }
+    }
+
+    .details-item {
+      width: 33%;
+      display: flex;
+      flex-direction: column;
+      padding: 0.5rem;
+      span {
+        margin-bottom: 0.5rem;
+        border-left: 2px solid $first-color;
+        padding: 0 0.5rem;
+      }
+    }
+
+    .option {
+      width: 33%;
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+
+      .edit {
+        font-size: 22px;
+        color: $first-color;
+        &:hover {
+          cursor: pointer;
+          transition: all 0.5s;
+        }
+      }
+    }
+  }
+
+  .process-checkout {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    align-content: flex-start;
+    div {
+      margin-bottom: 1rem;
+      padding: 0.5rem;
+      border-radius: 8px;
+    }
+
+    .btn-checkout {
+      border: 0;
+      outline: 0;
+      background-color: #ffd900;
+      text-transform: uppercase;
+      &:hover {
+        cursor: pointer;
+        transition: all 0.5s ease-out;
+      }
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  .cart {
+    .one-item-cart {
+      .img-item-cart {
+        width: 100%;
+      }
+      .details-item {
+        width: 50%;
+      }
+      .option {
+        width: 50%;
+      }
+    }
+  }
+}
+@media (min-width: 576.5px) and (max-width: 767px) {
+  .one-item-cart {
+    .img-item-cart {
+      width: 100%;
+    }
+    .details-item {
+      width: 50%;
+    }
+    .option {
+      width: 50%;
+    }
+  }
+}
+
+@media (min-width: 767.5px) and (max-width: 991px) {
+  .one-item-cart {
+    .img-item-cart {
+      width: 100%;
+    }
+    .details-item {
+      width: 50%;
+    }
+    .option {
+      width: 50%;
+    }
+  }
+}

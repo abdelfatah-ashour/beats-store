@@ -1,0 +1,73 @@
+.history {
+  width: 100%;
+  min-height: 100vh;
+}
+
+.history h4 {
+  width: 100%;
+  text-align: center;
+  text-transform: uppercase;
+  margin: 2rem 0;
+  word-spacing: 8px;
+}
+
+.history table {
+  width: 700px;
+  border-collapse: collapse;
+  text-align: centers;
+  margin: 0 auto;
+}
+
+.history table tr:nth-of-type(odd) {
+  background: #eee;
+}
+
+.history table th {
+  background: #fc846b;
+  color: #111;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 14px;
+}
+
+.history table td,
+.history table th {
+  padding: 6px;
+  border: 1px solid #ccc;
+  text-align: center;
+}
+
+.alert {
+  width: 600px;
+  padding: 1rem;
+  background-color: #ffd54b;
+  border-radius: 0.5rem;
+  margin: 0 auto;
+  text-align: center;
+  text-transform: capitalize;
+}
+
+@media (max-width: 576px) {
+  .history {
+    padding: 0.5rem;
+  }
+  .history table {
+    width: 100%;
+  }
+  .alert {
+    width: 85%;
+  }
+}
+
+@media (min-width: 576.5px) and (max-width: 767px) {
+  .history {
+    padding: 0.5rem;
+  }
+  .history table {
+    width: 100%;
+  }
+  .alert {
+    width: 85%;
+  }
+}
+/*# sourceMappingURL=historyOrder.css.map */

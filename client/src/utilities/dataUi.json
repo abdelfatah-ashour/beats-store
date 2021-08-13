@@ -1,0 +1,6 @@
+{
+  "colors": ["black", "blue", "green", "gray", "orange", "read", "white"],
+  "materials": ["fiber", "plastic", "silicon"],
+  "sizes": [2.5, 3.5, 12, 12.5, 13, 13.5],
+  "brands": ["arc", "autofy", "bear", "nemu"]
+}

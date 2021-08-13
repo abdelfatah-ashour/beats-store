@@ -1,0 +1,177 @@
+.upload-products {
+  width: 100%;
+  min-height: 100vh;
+  margin: 0 auto;
+  background-color: #fff4f4;
+  overflow: auto;
+}
+
+.upload-products .wrapper-upload-products {
+  width: 400px;
+  margin: 0 auto;
+  background-color: #fefefe;
+  padding: 0 1rem;
+}
+
+.upload-products .wrapper-upload-products h3 {
+  text-transform: uppercase;
+  padding: 3rem 0.5rem;
+  text-align: center;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+}
+
+.upload-products .wrapper-upload-products .main-details {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.upload-products .wrapper-upload-products .main-details .one-item {
+  width: 100%;
+  background-color: #fc846b;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border-radius: 0.5rem;
+}
+
+.upload-products .wrapper-upload-products .main-details .one-item .wrapper-head {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.upload-products .wrapper-upload-products .main-details .one-item .wrapper-head h3 {
+  text-transform: uppercase;
+  padding: 0.5rem;
+}
+
+.upload-products .wrapper-upload-products .main-details .one-item .wrapper-head button {
+  padding: 0;
+  border: 0;
+  outline: 0;
+  border-radius: 4px;
+  font-weight: 900;
+  height: 1.5rem;
+  width: 1.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 16px;
+}
+
+.upload-products .wrapper-upload-products .main-details .one-item .wrapper-head button:hover {
+  cursor: pointer;
+}
+
+.upload-products .wrapper-upload-products .main-details .one-item .container-group-control {
+  position: relative;
+  display: block;
+}
+
+.group-control {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-bottom: 0.5rem;
+}
+
+.group-control label {
+  width: 100%;
+  padding: 0.25rem;
+  text-transform: capitalize;
+  font-size: 14px;
+}
+
+.group-control select {
+  border: 2px solid #fc846b;
+  outline: 0;
+  padding: 0.25rem;
+  border-radius: 0.2rem;
+}
+
+.group-control select:focus, .group-control select:active {
+  border-color: #fc846b;
+}
+
+.group-control select option {
+  background-color: #fff;
+  color: #111;
+  padding: 0.25rem;
+}
+
+.group-control select option:hover {
+  background-color: #fc846b;
+  color: #fff;
+}
+
+.group-control input {
+  padding: 0.55rem;
+  border: 2px solid #fc846b;
+  outline: 0;
+  border-radius: 4px;
+}
+
+.hidden-one-item {
+  display: none !important;
+}
+
+.btn-addition {
+  width: 2rem;
+  height: 2rem;
+  border: 0;
+  outline: 0;
+  background-color: #fc846b;
+  color: #fff;
+  font-size: 24px;
+  border-radius: 50%;
+  font-weight: 900;
+  margin: 1rem auto;
+}
+
+.btn-addition:hover {
+  cursor: pointer;
+}
+
+.submitting button {
+  background-color: #fc846b;
+  color: #fff;
+  border: 0;
+  outline: 0;
+  font-size: 16px;
+  font-weight: 700;
+  padding: 1rem;
+  border-radius: 0.25rem;
+  text-transform: uppercase;
+}
+
+.submitting button:active {
+  -webkit-box-shadow: 0 0 4px 2px #fc846b;
+          box-shadow: 0 0 4px 2px #fc846b;
+}
+
+.submitting button:hover {
+  cursor: pointer;
+}
+/*# sourceMappingURL=UploadProduct.css.map */

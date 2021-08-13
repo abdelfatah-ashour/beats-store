@@ -1,0 +1,126 @@
+.editQtyItem {
+  width: 800px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 2rem auto;
+}
+
+.editQtyItem .wrapper-Img {
+  width: 200px;
+  height: 200px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.editQtyItem .wrapper-Img img {
+  width: 100%;
+}
+
+.editQtyItem .control-change-qty {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  min-height: 45px;
+  padding: 1rem;
+  margin: 1rem;
+}
+
+.editQtyItem .control-change-qty div span {
+  text-decoration: underline;
+}
+
+.editQtyItem .control-change-qty div button {
+  padding: 0.5rem;
+  border: 2px solid #555;
+  border-radius: 4px;
+  outline: 0;
+  font-size: 18px;
+  font-weight: 700;
+  margin: 0.5rem;
+  background-color: transparent;
+}
+
+.editQtyItem .control-change-qty div button:hover {
+  cursor: pointer;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.editQtyItem .control-change-qty button {
+  padding: 0.5rem;
+  border: 2px solid #555;
+  border-radius: 4px;
+  outline: 0;
+  font-size: 18px;
+  font-weight: 700;
+  margin: 0.5rem;
+  background-color: transparent;
+}
+
+.editQtyItem .control-change-qty button:hover {
+  background-color: #fc846b;
+  cursor: pointer;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+@media (max-width: 576px) {
+  .editQtyItem {
+    width: 100%;
+  }
+  .editQtyItem .wrapper-Img {
+    width: 100%;
+  }
+  .editQtyItem .wrapper-Img img {
+    width: 200px;
+    height: 200px;
+  }
+  .editQtyItem .control-change-qty {
+    width: 100%;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
+@media (min-width: 576.5px) and (max-width: 767px) {
+  .editQtyItem {
+    width: 100%;
+  }
+  .editQtyItem .wrapper-Img {
+    width: 100%;
+  }
+  .editQtyItem .wrapper-Img img {
+    width: 200px;
+    height: 200px;
+  }
+  .editQtyItem .control-change-qty {
+    width: 100%;
+  }
+}
+/*# sourceMappingURL=editQty.css.map */

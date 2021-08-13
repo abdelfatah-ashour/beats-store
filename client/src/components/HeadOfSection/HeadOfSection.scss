@@ -1,0 +1,30 @@
+@import "../../assets/css/variables.scss";
+
+.Head_Of_Section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  height: 200px;
+  h6 {
+    position: relative;
+    font-size: 14px;
+    text-align: center;
+    text-transform: capitalize;
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      width: 5rem;
+      height: 2px;
+      background-color: $first-color;
+      transform: translateY(-50px) translateX(50%);
+    }
+  }
+  h3 {
+    font-size: 22px;
+    text-transform: capitalize;
+    color: $first-color;
+  }
+}

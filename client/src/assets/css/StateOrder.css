@@ -1,0 +1,116 @@
+.state-order {
+  width: 100%;
+  min-height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.state-order .parent-order {
+  width: 600px;
+  border: 2px solid #fc846b;
+  -webkit-box-shadow: 0 0 8px #fc846b;
+          box-shadow: 0 0 8px #fc846b;
+  padding: 1rem;
+  border-radius: 4px;
+  margin: 2rem 0;
+}
+
+.state-order .parent-order .current-state {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 4px;
+  padding: 0.5rem;
+}
+
+.state-order .parent-order .current-state div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0.5rem;
+  border: 2px solid #fc846b;
+  border-radius: 50%;
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.state-order .parent-order .current-state span {
+  width: 40px;
+  height: 2px;
+  background-color: #fc846b;
+  margin: 0 4px;
+}
+
+.state-order .parent-order .details-order {
+  width: 100%;
+  min-height: 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  padding: 0.5rem;
+  line-height: 1.7;
+}
+
+@media (max-width: 576px) {
+  .parent-order {
+    width: 95% !important;
+    margin: 2rem auto;
+  }
+}
+
+@media (min-width: 576.5px) and (max-width: 767px) {
+  .parent-order {
+    width: 95% !important;
+    margin: 2rem auto;
+  }
+}
+
+@media (min-width: 767.5px) and (max-width: 991px) {
+  .parent-order {
+    width: 75% !important;
+  }
+}
+
+.activeState {
+  border-color: rgba(33, 230, 33, 0.87) !important;
+  color: rgba(33, 230, 33, 0.87) !important;
+}
+
+.activeSpaceStep {
+  background-color: rgba(33, 230, 33, 0.87) !important;
+}
+/*# sourceMappingURL=StateOrder.css.map */

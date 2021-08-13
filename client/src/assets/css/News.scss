@@ -1,0 +1,103 @@
+@import "./variables.scss";
+
+.news {
+  width: 100%;
+  min-height: 100vh;
+  background-color: $first-color;
+  padding: 2rem;
+  display: grid;
+  grid-template-columns: repeat(3, 30%);
+  grid-column-gap: 20px;
+  grid-row-gap: 20px;
+  justify-content: center;
+  .one-item {
+    height: 300px;
+    position: relative;
+    border-radius: 4px;
+    overflow: hidden;
+
+    &:hover {
+      .wrapper-img {
+        .overlay-news {
+          transform: translateY(0);
+          transition: all 0.5s ease-out;
+        }
+      }
+    }
+    .wrapper-img {
+      position: absolute;
+      top: 0;
+      right: 0;
+      left: 0;
+      height: 75%;
+      overflow: hidden;
+      img {
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+      }
+
+      .overlay-news {
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 0;
+        background-color: rgba(0, 0, 0, 0.5);
+        width: 100%;
+        height: 100%;
+        z-index: 2;
+        transform: translateY(100%);
+      }
+    }
+    .head-article {
+      height: 25%;
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      left: 0;
+      padding: 0.5rem;
+      background-color: #fff;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      font-size: 16px;
+      .link-news {
+        color: #fff;
+        background-color: $first-color;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 18px;
+        padding: 0.5rem;
+        border-radius: 50%;
+        z-index: 3;
+        transform: translate(-25%, -100%);
+        &:hover {
+          color: cornflowerblue;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  .news {
+    grid-template-columns: 1fr;
+    .one-item {
+      .head-article {
+        font-size: 14px;
+      }
+    }
+  }
+}
+
+@media (min-width: 576.5px) and (max-width: 767px) {
+  .news {
+    grid-template-columns: repeat(2, 0.5fr);
+    .one-item {
+      .head-article {
+        font-size: 14px;
+      }
+    }
+  }
+}

@@ -1,0 +1,32 @@
+@import "./variables.scss";
+
+.one-news {
+  width: 100%;
+  min-height: 100vh;
+  padding: 2rem;
+  .view-img {
+    width: 400px;
+    max-height: 250px;
+    margin: 0 auto;
+    overflow: hidden;
+    img {
+      width: 100%;
+    }
+  }
+
+  .wrapper-news {
+    padding: 1rem;
+    h3,
+    h6,
+    .content-news {
+      line-height: 1.7;
+      margin: 2rem 0;
+    }
+
+    h6 {
+      text-transform: uppercase;
+      font-weight: 700;
+      font-size: 16px;
+    }
+  }
+}

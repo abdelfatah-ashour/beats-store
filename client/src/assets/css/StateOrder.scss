@@ -1,0 +1,82 @@
+@import "./variables.scss";
+
+.state-order {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  .parent-order {
+    width: 600px;
+    border: 2px solid $first-color;
+    box-shadow: 0 0 8px $first-color;
+    padding: 1rem;
+    border-radius: 4px;
+    margin: 2rem 0;
+    .current-state {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 4px;
+      padding: 0.5rem;
+
+      div {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0.5rem;
+        border: 2px solid $first-color;
+        border-radius: 50%;
+        font-size: 22px;
+        font-weight: 700;
+      }
+      span {
+        width: 40px;
+        height: 2px;
+        background-color: $first-color;
+        margin: 0 4px;
+      }
+    }
+    .details-order {
+      width: 100%;
+      min-height: 100px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
+      padding: 0.5rem;
+      line-height: 1.7;
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  .parent-order {
+    width: 95% !important;
+    margin: 2rem auto;
+  }
+}
+
+@media (min-width: 576.5px) and (max-width: 767px) {
+  .parent-order {
+    width: 95% !important;
+    margin: 2rem auto;
+  }
+}
+
+@media (min-width: 767.5px) and (max-width: 991px) {
+  .parent-order {
+    width: 75% !important;
+  }
+}
+
+.activeState {
+  border-color: rgba(33, 230, 33, 0.87) !important;
+  color: rgba(33, 230, 33, 0.87) !important;
+}
+
+.activeSpaceStep {
+  background-color: rgba(33, 230, 33, 0.87) !important;
+}

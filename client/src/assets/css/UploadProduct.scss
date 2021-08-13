@@ -1,0 +1,146 @@
+@import "./variables.scss";
+
+.upload-products {
+  width: 100%;
+  min-height: 100vh;
+  margin: 0 auto;
+  background-color: rgb(255, 244, 244);
+  overflow: auto;
+  .wrapper-upload-products {
+    width: 400px;
+    margin: 0 auto;
+    background-color: rgb(254, 254, 254);
+    padding: 0 1rem;
+    h3 {
+      text-transform: uppercase;
+      padding: 3rem 0.5rem;
+      text-align: center;
+      font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+        "Lucida Sans", Arial, sans-serif;
+    }
+    .main-details {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      .one-item {
+        width: 100%;
+        background-color: $first-color;
+        padding: 1rem;
+        margin-bottom: 1rem;
+        border-radius: 0.5rem;
+        .wrapper-head {
+          display: flex;
+          justify-content: space-between;
+          h3 {
+            text-transform: uppercase;
+            padding: 0.5rem;
+          }
+
+          button {
+            padding: 0;
+            border: 0;
+            outline: 0;
+            border-radius: 4px;
+            font-weight: 900;
+            height: 1.5rem;
+            width: 1.5rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 16px;
+            &:hover {
+              cursor: pointer;
+            }
+          }
+        }
+
+        .container-group-control {
+          position: relative;
+          display: block;
+        }
+      }
+    }
+  }
+}
+
+.group-control {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 0.5rem;
+  label {
+    width: 100%;
+    padding: 0.25rem;
+    text-transform: capitalize;
+    font-size: 14px;
+  }
+
+  select {
+    border: 2px solid $first-color;
+    outline: 0;
+    padding: 0.25rem;
+    border-radius: 0.2rem;
+    &:focus,
+    &:active {
+      border-color: $first-color;
+    }
+    option {
+      background-color: #fff;
+      color: #111;
+      padding: 0.25rem;
+      &:hover {
+        background-color: $first-color;
+        color: #fff;
+      }
+    }
+  }
+
+  input {
+    padding: 0.55rem;
+    border: 2px solid $first-color;
+    outline: 0;
+    border-radius: 4px;
+  }
+}
+
+.hidden-one-item {
+  display: none !important;
+}
+
+.btn-addition {
+  width: 2rem;
+  height: 2rem;
+  border: 0;
+  outline: 0;
+  background-color: $first-color;
+  color: #fff;
+  font-size: 24px;
+  border-radius: 50%;
+  font-weight: 900;
+  margin: 1rem auto;
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.submitting {
+  button {
+    background-color: $first-color;
+    color: #fff;
+    border: 0;
+    outline: 0;
+    font-size: 16px;
+    font-weight: 700;
+    padding: 1rem;
+    border-radius: 0.25rem;
+    text-transform: uppercase;
+    &:active {
+      box-shadow: 0 0 4px 2px $first-color;
+    }
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}

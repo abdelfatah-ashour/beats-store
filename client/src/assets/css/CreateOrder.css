@@ -1,0 +1,231 @@
+.create-order {
+  width: 100%;
+  min-height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.create-order .stepper {
+  width: 450px;
+  height: 370px;
+  border-radius: 4px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  border: 2px solid rgba(252, 132, 107, 0.5);
+  -webkit-box-shadow: 0 0 4px #fc846b;
+          box-shadow: 0 0 4px #fc846b;
+}
+
+.create-order .stepper .head-of-stepper {
+  width: 100%;
+  height: 110px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  padding: 0.5rem;
+}
+
+.create-order .stepper .head-of-stepper div {
+  font-size: 18px;
+  font-weight: 900;
+  padding: 8px;
+  border-radius: 50%;
+  color: rgba(252, 132, 107, 0.5);
+  border: 2px solid rgba(252, 132, 107, 0.5);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0.5rem;
+  position: relative;
+}
+
+.create-order .stepper .head-of-stepper div:hover {
+  cursor: pointer;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.create-order .stepper .head-of-stepper div:nth-of-type(1)::before, .create-order .stepper .head-of-stepper div:nth-of-type(2)::before {
+  content: attr(pop-up);
+  position: absolute;
+  top: 0;
+  -webkit-transform: translate(4px, 250%);
+          transform: translate(4px, 250%);
+  padding: 0.2rem;
+  color: #111;
+  font-size: 10px;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+.create-order .stepper .head-of-stepper div:nth-of-type(1)::before {
+  content: attr(pop-up);
+  font-weight: 400;
+  width: 5rem;
+  -webkit-transform: translate(12px, 250%);
+          transform: translate(12px, 250%);
+}
+
+.create-order .stepper .head-of-stepper span {
+  position: relative;
+  width: 32px;
+  height: 2px;
+  background-color: rgba(252, 132, 107, 0.5);
+  margin-top: 24px;
+}
+
+.create-order .stepper .head-of-stepper .btn-dir button {
+  font-size: 14px;
+  font-weight: 700;
+  border: 0;
+  outline: 0;
+  padding: 0.5rem;
+  justify-self: flex-end;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-right: 1rem;
+  background-color: #fc846b;
+  text-transform: uppercase;
+  border-radius: 4px;
+}
+
+.create-order .stepper .head-of-stepper .btn-dir button:hover {
+  cursor: pointer;
+  -webkit-transition: all 0.5s ease-out;
+  transition: all 0.5s ease-out;
+}
+
+.create-order .stepper .body-stepper {
+  width: 100%;
+  height: calc(100% - 100px);
+  padding: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  line-height: 1.7;
+}
+
+.create-order .stepper .body-stepper div {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  line-height: 2.2;
+  margin-bottom: 0.5rem;
+}
+
+.create-order .stepper .body-stepper div label {
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.create-order .stepper .body-stepper div input {
+  padding: 0.4rem;
+  border-radius: 4px;
+  border: 1px solid #666;
+  outline: 0;
+}
+
+.create-order .stepper .body-stepper .btn-dir button {
+  font-size: 14px;
+  font-weight: 700;
+  border: 0;
+  outline: 0;
+  padding: 0.5rem;
+  justify-self: flex-end;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-right: 1rem;
+  background-color: #fc846b;
+  text-transform: uppercase;
+  border-radius: 4px;
+}
+
+.create-order .stepper .body-stepper .btn-dir button:hover {
+  cursor: pointer;
+  -webkit-transition: all 0.5s ease-out;
+  transition: all 0.5s ease-out;
+}
+
+@media (max-width: 576px) {
+  .create-order .stepper {
+    width: 100%;
+  }
+}
+
+@media (min-width: 576.5px) and (max-width: 767px) {
+  .create-order .stepper {
+    width: 100%;
+  }
+}
+
+@media (min-width: 767.5px) and (max-width: 991px) {
+  .create-order .stepper {
+    width: 75%;
+  }
+}
+
+.activeStep {
+  color: #fc846b !important;
+  border-color: #fc846b !important;
+}
+/*# sourceMappingURL=CreateOrder.css.map */
