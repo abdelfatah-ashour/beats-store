@@ -11,4 +11,5 @@ export const store = configureStore({
     auth: authReducers,
     filter: filterReducers,
   },
+  devTools: process.env.NODE_ENV !== "production",
 });
