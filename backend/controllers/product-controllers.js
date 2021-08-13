@@ -76,35 +76,7 @@ async function getProduct(req, res) {
   }
 }
 
-async function viewOneProduct(req, res) {
-  try {
-    const {productName} = req.params;
-    await Product.find({name: productName}, (error, docs) => {
-      if (error) throw new Error(error);
-      if (docs.length === 0) {
-        return res.status(404).json({message: "not found! product"});
-      }
-      return res.status(200).json({message: docs});
-    });
-  } catch (error) {
-    return res.status(500).json({message: error.message});
-  }
-}
-
-async function getOneProduct(req, res) {
-  try {
-    const {productId} = req.params;
-    console.log({...req.params});
-    const result = await Product.findOne({_id: productId});
-    return res.status(200).json({message: result});
-  } catch (error) {
-    return res.status(500).json({message: error.message});
-  }
-}
-
 module.exports = {
   createNewProduct,
   getProduct,
-  viewOneProduct,
-  getOneProduct,
 };

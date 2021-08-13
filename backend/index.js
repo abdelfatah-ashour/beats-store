@@ -45,7 +45,7 @@ if (process.env.NODE_ENV === "development") {
 // all routes
 
 // re lunch repo application in heroku
-app.use("/api/v1", (req, res) => {
+app.use("/api/v1/testing", (req, res) => {
   try {
     res.status(200).json({message: "API working..."});
   } catch (error) {
