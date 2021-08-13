@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "parcel ./public/index.html --no-cache --open -p 3000",
+    "start": "parcel ./public/index.html --no-cache",
     "build": "parcel build ./public/index.html --out-dir dist --no-cache",
     "test": "jest"
   },
@@ -31,10 +31,8 @@
   "dependencies": {
     "@reduxjs/toolkit": "^1.6.1",
     "axios": "^0.21.1",
-    "classnames": "^2.3.1",
     "js-cookie": "^3.0.0",
     "lodash": "^4.17.21",
-    "r": "0.0.5",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-helmet": "^6.1.0",
