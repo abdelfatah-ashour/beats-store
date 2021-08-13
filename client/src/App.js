@@ -1,3 +1,4 @@
+// eslint-disable-next-line react-hooks/exhaustive-deps
 import React from "react";
 import {BrowserRouter, Route, Switch} from "react-router-dom";
 import {ToastContainer} from "react-toastify";

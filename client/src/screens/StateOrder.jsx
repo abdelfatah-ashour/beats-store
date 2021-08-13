@@ -12,14 +12,14 @@ export default function StateOrder() {
   const {orderId} = useParams();
   const [order, setOrder] = useState(false);
 
-  const fetchStateOrders = async () => {
-    await Axios.get("/order/history", {params: {orderId}})
-      .then(({data}) => setOrder(data.message))
-      .catch(() => setOrder(false));
-  };
+  useEffect(() => {
+    async function fetchStateOrders() {
+      await Axios.get("/order/history", {params: {orderId}})
+        .then(({data}) => setOrder(data.message))
+        .catch(() => setOrder(false));
+    }
 
-  useEffect(async () => {
-    await fetchStateOrders();
+    fetchStateOrders();
     return () => {
       return setOrder(false);
     };

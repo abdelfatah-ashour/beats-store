@@ -44,18 +44,21 @@ export default function Index() {
       dispatch(LOGOUT());
     }
     return () => {
-      return;
+      return null;
     };
-  }, [userInfo?.role]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   // list cart
   useEffect(() => {
     if (getCart) {
       dispatch(GET_CART(getCart));
     }
+
     return () => {
       return null;
     };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (

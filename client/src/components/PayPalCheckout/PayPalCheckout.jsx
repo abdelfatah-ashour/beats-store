@@ -11,17 +11,6 @@ export default function PayPalCheckout({basicInfo, itemsList, totalAmount}) {
   const dispatch = useDispatch();
   const btnCheckout = useRef();
 
-  const handleSuccessOrder = details => {
-    localStorage.setItem("cart", JSON.stringify([]));
-    dispatch(SUCCESS_ORDER());
-    Router.push("/");
-
-    Toast(
-      "info",
-      "🚀 Transaction completed by " + details.payer.name.given_name
-    );
-  };
-
   useEffect(() => {
     /*
       1- in createOrder we send items data to Database with payment false.
@@ -73,6 +62,18 @@ export default function PayPalCheckout({basicInfo, itemsList, totalAmount}) {
                   transaction: true,
                 })
                   .then(() => {
+                    function handleSuccessOrder(details) {
+                      localStorage.setItem("cart", JSON.stringify([]));
+                      dispatch(SUCCESS_ORDER());
+                      Router.push("/");
+
+                      Toast(
+                        "info",
+                        "🚀 Transaction completed by " +
+                          details.payer.name.given_name
+                      );
+                    }
+
                     handleSuccessOrder(details);
                   })
                   .catch(error => {
@@ -96,7 +97,7 @@ export default function PayPalCheckout({basicInfo, itemsList, totalAmount}) {
     return () => {
       return;
     };
-  }, []);
+  }, [basicInfo, itemsList, totalAmount, Router, dispatch]);
 
   return <div ref={btnCheckout}></div>;
 }

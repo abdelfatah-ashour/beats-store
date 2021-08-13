@@ -23,7 +23,7 @@ export default function Products() {
     return () => {
       return null;
     };
-  }, []);
+  }, [dispatch]);
 
   const handleToggleFilter = () => {
     const filterElem = document.getElementById("filter");

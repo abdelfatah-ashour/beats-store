@@ -1,4 +1,4 @@
-import React, {useCallback, useEffect, useState} from "react";
+import React, {useCallback, useState} from "react";
 import {useLocation, useHistory} from "react-router-dom";
 import {RiSecurePaymentFill} from "react-icons/ri";
 import {BiUserPin} from "react-icons/bi";
@@ -12,6 +12,7 @@ export default function CreateOrder() {
   const [isValid, setIsValid] = useState(false);
   const [product, setProduct] = useState(null);
   const {allProducts} = useSelector(state => state);
+  const {products} = allProducts;
   const route = useHistory();
 
   function useQuery() {
@@ -20,19 +21,17 @@ export default function CreateOrder() {
 
   let query = useQuery();
 
-  const handleFetchOneProduct = useCallback(
-    id => {
-      const result = allProducts.products.filter(item => {
-        return item._id === id;
-      });
-      if (result.length > 0) {
-        setProduct(result);
-      } else {
-        route.push("/products");
-      }
-    },
-    [query.get("productId")]
-  );
+  const result = products.filter(item => {
+    return item._id === query.get("productId");
+  });
+
+  const handleFetchOneProduct = useCallback(() => {
+    if (result.length > 0) {
+      setProduct(result);
+    } else {
+      route.push("/products");
+    }
+  }, [result, route]);
 
   const types = {
     basic: "BASIC",
@@ -64,11 +63,7 @@ export default function CreateOrder() {
     });
     setIsValid(result);
   };
-
-  useEffect(async () => {
-    await handleFetchOneProduct(query.get("productId"));
-    return () => {};
-  }, [query.get("productId")]);
+  handleFetchOneProduct(query.get("productId"));
 
   return (
     <SEO title="Processing Checkout">

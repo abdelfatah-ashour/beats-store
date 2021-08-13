@@ -17,24 +17,12 @@ export default function ViewProduct() {
   const [isSelected, setIsSelected] = useState([]);
   const {allProducts} = useSelector(state => state);
   const route = useHistory();
+
   const [selected, setSelected] = useState({
     size: null,
     color: null,
     material: null,
   });
-
-  const fetchOneProduct = name => {
-    try {
-      const result = allProducts.products.filter(item => {
-        return item._id === productId;
-      });
-      setProducts(allProducts.products.filter(item => item.name === name));
-      setViewProduct(result.length > 0 ? result[0] : null);
-      if (result.length === 0) route.push("/products");
-    } catch (error) {
-      alert(error.message);
-    }
-  };
 
   const handleActiveImg = imgSrc => {
     const mainImg = document.getElementById("mainImage");
@@ -47,6 +35,7 @@ export default function ViewProduct() {
         ...selected,
         [e.target.name]: e.target.value,
       });
+
       const result = products.filter(item => {
         return (
           item.size ===
@@ -62,15 +51,27 @@ export default function ViewProduct() {
 
       setIsSelected(result);
     },
-    [selected]
+    [selected, products]
   );
 
   useEffect(() => {
+    function fetchOneProduct(name) {
+      try {
+        const result = allProducts.products.filter(item => {
+          return item._id === productId;
+        });
+        setProducts(allProducts.products.filter(item => item.name === name));
+        setViewProduct(result.length > 0 ? result[0] : null);
+        if (result.length === 0) route.push("/products");
+      } catch (error) {
+        alert(error.message);
+      }
+    }
     fetchOneProduct(productName);
     return () => {
       return;
     };
-  }, [productName]);
+  }, [allProducts.products, productId, productName, route]);
 
   return (
     <SEO title="View Product">
@@ -82,7 +83,7 @@ export default function ViewProduct() {
               <div className="wrapper-img">
                 <img
                   src={process.env.API + "/" + viewProduct?.productImages[0]}
-                  alt="main image view product"
+                  alt="main view product"
                   id="mainImage"
                   loading="lazy"
                 />
