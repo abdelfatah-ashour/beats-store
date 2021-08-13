@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from "react";
+import React, {useEffect} from "react";
 import HeadPage from "../components/HeadPage/HeadPage.jsx";
 import SpecificFilter from "../components/SpecificFilter/SpecificFilter.jsx";
 import {useDispatch, useSelector} from "react-redux";
