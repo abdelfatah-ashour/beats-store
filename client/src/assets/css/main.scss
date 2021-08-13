@@ -1,12 +1,13 @@
-@import url("https://fonts.googleapis.com/css2?family=Righteous&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap");
-
 *,
 *::before,
 *::after {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+}
+
+body {
+  font-display: swap;
 }
 
 .container {
@@ -25,14 +26,27 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Righteous", cursive;
+  @font-face {
+    font-family: "Righteous", cursive;
+    font-style: normal;
+    font-weight: 400;
+    src: url("https://fonts.googleapis.com/css2?family=Righteous&display=swap")
+      format("woff2");
+    font-display: swap;
+  }
 }
 
 p,
 span,
 button,
 a {
-  font-family: "Josefin Sans", sans-serif !important;
+  @font-face {
+    font-family: "Josefin Sans", sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    src: url("https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap");
+    font-display: swap;
+  }
 }
 
 @media (max-width: 576px) {
