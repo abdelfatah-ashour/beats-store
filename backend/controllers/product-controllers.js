@@ -50,19 +50,7 @@ async function createNewProduct(req, res) {
 
 async function getProduct(req, res) {
   try {
-    const {category, productType, price, size, brand, material, color} =
-      req.query;
-
-    await Product.find({
-      category: category || {$gt: ""},
-      productType: productType || {$gt: ""},
-      price: price || {$gt: 0},
-      size: size || {$gt: 0},
-      brand: brand || {$gt: ""},
-      material: material || {$gt: ""},
-      color: color || {$gt: ""},
-      isValid: true,
-    })
+    await Product.find()
       .then(items => {
         return res.status(200).json({message: items});
       })
