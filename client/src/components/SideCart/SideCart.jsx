@@ -3,6 +3,7 @@ import {toggleSideCart} from "../../utilities/Side_cart";
 import {AiFillDelete} from "react-icons/ai";
 import {useDispatch, useSelector} from "react-redux";
 import {removeFromCart} from "../../utilities/crud_cart";
+import {API} from "../../utilities/Keys.json";
 import "./SideCard.css";
 
 export default function SideCart() {
@@ -23,7 +24,7 @@ export default function SideCart() {
             <div className="one-item" key={i}>
               <div className="img-item">
                 <img
-                  src={`${process.env.API}/${oneItem.productImages[0]}`}
+                  src={`${API}/${oneItem.productImages[0]}`}
                   alt="productImages"
                   loading="lazy"
                 />

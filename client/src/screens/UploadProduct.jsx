@@ -1,7 +1,7 @@
 import React, {useState} from "react";
-import "../assets/css/UploadProduct.css";
 import defaultAxios from "../utilities/defaultAxios.js";
 import SEO from "../components/SEO/SEO.jsx";
+import "../assets/css/UploadProduct.css";
 
 export default function UploadProduct() {
   const [infoProduct, setInfoProduct] = useState({

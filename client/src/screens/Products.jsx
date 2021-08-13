@@ -9,6 +9,7 @@ import {HiOutlineFilter} from "react-icons/hi";
 import {BiSearch} from "react-icons/bi";
 import {Link} from "react-router-dom";
 import SEO from "../components/SEO/SEO.jsx";
+import {API} from "../utilities/Keys.json";
 import "../assets/css/Products.css";
 
 export default function Products() {
@@ -64,7 +65,7 @@ export default function Products() {
                     </div>
                     <div className="wrapper-img" style={{marginBottom: "1rem"}}>
                       <img
-                        src={process.env.API + "/" + product.productImages[0]}
+                        src={API + "/" + product.productImages[0]}
                         alt={product.productImages[0]}
                       />
                       <div className="overlay"></div>
@@ -111,7 +112,7 @@ export default function Products() {
                         style={{marginBottom: "1rem"}}
                       >
                         <img
-                          src={process.env.API + "/" + product.productImages[0]}
+                          src={API + "/" + product.productImages[0]}
                           alt={product.productImages[0]}
                         />
                         <div className="overlay"></div>

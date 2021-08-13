@@ -4,6 +4,7 @@ import SEO from "../components/SEO/SEO.jsx";
 import newApi from "../utilities/new-api.json";
 import {BiLink} from "react-icons/bi";
 import {Link} from "react-router-dom";
+import {API} from "../utilities/Keys.json";
 import "../assets/css/News.css";
 
 export default function news() {
@@ -16,7 +17,7 @@ export default function news() {
             <div key={oneNews._id} className="one-item">
               <div className="wrapper-img">
                 <img
-                  src={process.env.API + "/" + oneNews.imageOfArticle}
+                  src={API + "/" + oneNews.imageOfArticle}
                   alt={oneNews.author}
                   loading="lazy"
                 />

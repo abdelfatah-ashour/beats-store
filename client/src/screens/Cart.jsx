@@ -6,6 +6,7 @@ import {GrSecure} from "react-icons/gr";
 import {FaShoppingBasket} from "react-icons/fa";
 import {handleCalcTotalAmount, removeFromCart} from "../utilities/crud_cart";
 import {AiFillDelete} from "react-icons/ai";
+import {API} from "../utilities/Keys.json";
 import SEO from "../components/SEO/SEO.jsx";
 import "../assets/css/Cart.css";
 
@@ -35,11 +36,7 @@ export default function Cart() {
           return (
             <div className="one-item-cart" key={item._id}>
               <div className="img-item-cart">
-                <img
-                  src={`${process.env.API}/${item.productImages[0]}`}
-                  alt=""
-                  srcSet=""
-                />
+                <img src={`${API}/${item.productImages[0]}`} alt="" srcSet="" />
               </div>
               <div className="details-item">
                 <span>name : {item.name}</span>

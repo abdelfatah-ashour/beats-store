@@ -1,6 +1,7 @@
 import React from "react";
 import {useParams} from "react-router-dom";
 import news from "../utilities/new-api.json";
+import {API} from "../utilities/Keys.json";
 import "../assets/css/ViewOneNews.css";
 
 export default function ViewOneNews() {
@@ -15,7 +16,7 @@ export default function ViewOneNews() {
             <React.Fragment key={article._id}>
               <div className="view-img">
                 <img
-                  src={process.env.API + "/" + article.imageOfArticle}
+                  src={API + "/" + article.imageOfArticle}
                   alt={article.head}
                 />
               </div>

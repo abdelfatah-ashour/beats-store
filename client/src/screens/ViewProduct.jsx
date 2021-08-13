@@ -5,6 +5,7 @@ import {addToWishlist} from "../utilities/crud_wishlist";
 import {AiOutlineHeart} from "react-icons/ai";
 import {FiShoppingCart} from "react-icons/fi";
 import {useDispatch, useSelector} from "react-redux";
+import {API} from "../utilities/Keys.json";
 import HeadPage from "../components/HeadPage/HeadPage";
 import SEO from "../components/SEO/SEO.jsx";
 import "../assets/css/ViewProduct.css";
@@ -82,7 +83,7 @@ export default function ViewProduct() {
             <div className="container-images">
               <div className="wrapper-img">
                 <img
-                  src={process.env.API + "/" + viewProduct?.productImages[0]}
+                  src={API + "/" + viewProduct?.productImages[0]}
                   alt="main view product"
                   id="mainImage"
                   loading="lazy"

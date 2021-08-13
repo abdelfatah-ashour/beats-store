@@ -2,6 +2,7 @@ import React, {useEffect, useState} from "react";
 import {useDispatch} from "react-redux";
 import {useParams, useHistory} from "react-router-dom";
 import {editQty} from "../utilities/crud_cart";
+import {API} from "../utilities/Keys.json";
 import SEO from "../components/SEO/SEO.jsx";
 import "../assets/css/editQty.css";
 
@@ -41,7 +42,7 @@ export default function EditQtyItem() {
                 <React.Fragment key={oenItem._id}>
                   <div className="wrapper-Img" key={oenItem._id}>
                     <img
-                      src={`${process.env.API}/${oenItem.productImages[0]}`}
+                      src={`${API}/${oenItem.productImages[0]}`}
                       alt="productImages"
                       loading="lazy"
                     />

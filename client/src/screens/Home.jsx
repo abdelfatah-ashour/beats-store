@@ -1,6 +1,7 @@
 import React from "react";
 import {AiOutlinePlayCircle} from "react-icons/ai";
 import {Link} from "react-router-dom";
+import {API} from "../utilities/Keys.json";
 import Carousal from "../components/Carousal/Carousal";
 import IMG1 from "../assets/imgs/img-1a_600x.png";
 import IMG2 from "../assets/imgs/img-2_600x.png";
@@ -193,7 +194,7 @@ export default function Home() {
                 <div className="one-people" key={_._id}>
                   <div className="wrapper-img">
                     <img
-                      src={process.env.aPI + "/" + _.imageOfArticle}
+                      src={API + "/" + _.imageOfArticle}
                       alt={_.author}
                       loading="lazy"
                     />

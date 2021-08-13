@@ -28,13 +28,4 @@ async function addToWishlist(item) {
   }
 }
 
-// async function removeFromCart() {
-//   try {
-//   } catch (error) {}
-// }
-// async function editItemInCart() {
-//   try {
-//   } catch (error) {}
-// }
-
 export {addToWishlist};

@@ -1,6 +1,6 @@
 import axios from "axios";
-
+import {API} from "../utilities/Keys.json";
 export default axios.create({
-  baseURL: `${process.env.API}/api/v1`,
+  baseURL: `${API}/api/v1`,
   withCredentials: true,
 });
