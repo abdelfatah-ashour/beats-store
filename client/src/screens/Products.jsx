@@ -40,7 +40,7 @@ export default function Products() {
         <div className="layout-products">
           <div className="main-products">
             {filter.length === 0 &&
-              slice(allProducts.products, 0, 12).map((product, i) => {
+              slice(allProducts.products, 0, 15).map((product, i) => {
                 return (
                   <div key={i} className="one-product">
                     <div className="option">
@@ -83,7 +83,7 @@ export default function Products() {
               })}
 
             {filter.length > 0 &&
-              slice(filter, 0, 12).map((product, i) => {
+              slice(filter, 0, 15).map((product, i) => {
                 return (
                   <div key={i} className="one-product">
                     <div className="option">

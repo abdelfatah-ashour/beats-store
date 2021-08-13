@@ -94,11 +94,11 @@ export default function ViewProduct() {
                   return (
                     <div key={i}>
                       <img
-                        src={process.env.API + "/" + image}
+                        src={API + "/" + image}
                         alt={image}
                         loading="lazy"
                         onClick={() =>
-                          handleActiveImg(`${process.env.API}/${image}`)
+                          handleActiveImg(`${API}/${image}`)
                         }
                       />
                     </div>
