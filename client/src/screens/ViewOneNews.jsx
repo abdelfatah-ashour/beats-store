@@ -1,7 +1,6 @@
 import React from "react";
 import {useParams} from "react-router-dom";
 import news from "../utilities/new-api.json";
-import {API} from "../utilities/Keys.json";
 import "../assets/css/ViewOneNews.css";
 
 export default function ViewOneNews() {
