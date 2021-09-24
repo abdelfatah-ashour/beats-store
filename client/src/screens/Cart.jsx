@@ -1,18 +1,17 @@
-import React, {useEffect, useState} from "react";
-import {Link} from "react-router-dom";
-import {FaEdit} from "react-icons/fa";
-import {useDispatch, useSelector} from "react-redux";
-import {GrSecure} from "react-icons/gr";
-import {FaShoppingBasket} from "react-icons/fa";
-import {handleCalcTotalAmount, removeFromCart} from "../utilities/crud_cart";
-import {AiFillDelete} from "react-icons/ai";
-import {API} from "../utilities/Keys.json";
+import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
+import { FaEdit } from "react-icons/fa";
+import { useDispatch, useSelector } from "react-redux";
+import { GrSecure } from "react-icons/gr";
+import { FaShoppingBasket } from "react-icons/fa";
+import { handleCalcTotalAmount, removeFromCart } from "../utilities/crud_cart";
+import { AiFillDelete } from "react-icons/ai";
 import SEO from "../components/SEO/SEO.jsx";
 import "../assets/css/Cart.css";
 
 export default function Cart() {
   const dispatch = useDispatch();
-  const {cart, auth} = useSelector(state => state);
+  const { cart, auth } = useSelector((state) => state);
   const [totalAmount, setTotalAmount] = useState(0.0);
   const [checked, setChecked] = useState(false);
 
@@ -32,11 +31,15 @@ export default function Cart() {
     <SEO title="Cart">
       <div className="cart">
         <h3>All items in Cart</h3>
-        {cart.map(item => {
+        {cart.map((item) => {
           return (
             <div className="one-item-cart" key={item._id}>
               <div className="img-item-cart">
-                <img src={`${API}/${item.productImages[0]}`} alt="" srcSet="" />
+                <img
+                  src={`${process.env.REACT_APP_API}/${item.productImages[0]}`}
+                  alt=""
+                  srcSet=""
+                />
               </div>
               <div className="details-item">
                 <span>name : {item.name}</span>

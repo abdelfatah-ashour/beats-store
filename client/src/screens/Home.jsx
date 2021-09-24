@@ -1,7 +1,6 @@
 import React from "react";
-import {AiOutlinePlayCircle} from "react-icons/ai";
-import {Link} from "react-router-dom";
-import {API} from "../utilities/Keys.json";
+import { AiOutlinePlayCircle } from "react-icons/ai";
+import { Link } from "react-router-dom";
 import Carousal from "../components/Carousal/Carousal";
 import IMG1 from "../assets/imgs/img-1a_600x.png";
 import IMG2 from "../assets/imgs/img-2_600x.png";
@@ -16,16 +15,16 @@ import "../assets/css/Home.css";
 
 export default function Home() {
   const popular = [
-    {name: "layla matt", position: "cto - mason", image: ENG2},
+    { name: "layla matt", position: "cto - mason", image: ENG2 },
     {
       name: "micheal jackson",
       position: "marketing manger - facebook",
       image: ENG1,
     },
-    {name: "sara john", position: "big fan  - boom", image: ENG3},
+    { name: "sara john", position: "big fan  - boom", image: ENG3 },
   ];
 
-  const handleDisplayExperience = id => {
+  const handleDisplayExperience = (id) => {
     const sliders = document.querySelectorAll(".slide-container");
     sliders.forEach((slide, i) => {
       if (i === id) {
@@ -38,7 +37,7 @@ export default function Home() {
   };
 
   return (
-    <SEO title="BOOM | official Page">
+    <SEO title="Beats-Store">
       <Carousal />
       <div className="container">
         <div className="buy-now">
@@ -153,7 +152,7 @@ export default function Home() {
               })}
             </div>
             <ul className="paginate">
-              {[0, 1, 2].map(item => {
+              {[0, 1, 2].map((item) => {
                 return (
                   <li
                     key={item + Math.ceil(Math.random() * Math.random())}
@@ -189,12 +188,12 @@ export default function Home() {
             sub="good treble performance"
           />
           <div className="wrapper-people">
-            {news.slice(0, 3).map(_ => {
+            {news.slice(0, 3).map((_) => {
               return (
                 <div className="one-people" key={_._id}>
                   <div className="wrapper-img">
                     <img
-                      src={API + "/" + _.imageOfArticle}
+                      src={process.env.REACT_APP_API + "/" + _.imageOfArticle}
                       alt={_.author}
                       loading="lazy"
                     />

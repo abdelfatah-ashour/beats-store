@@ -1,13 +1,12 @@
 import React from "react";
-import {toggleSideCart} from "../../utilities/Side_cart";
-import {AiFillDelete} from "react-icons/ai";
-import {useDispatch, useSelector} from "react-redux";
-import {removeFromCart} from "../../utilities/crud_cart";
-import {API} from "../../utilities/Keys.json";
+import { toggleSideCart } from "../../utilities/Side_cart";
+import { AiFillDelete } from "react-icons/ai";
+import { useDispatch, useSelector } from "react-redux";
+import { removeFromCart } from "../../utilities/crud_cart";
 import "./SideCard.css";
 
 export default function SideCart() {
-  const {cart} = useSelector(state => state);
+  const { cart } = useSelector((state) => state);
   const dispatch = useDispatch();
 
   return (
@@ -24,7 +23,7 @@ export default function SideCart() {
             <div className="one-item" key={i}>
               <div className="img-item">
                 <img
-                  src={`${API}/${oneItem.productImages[0]}`}
+                  src={`${process.env.REACT_APP_API}/${oneItem.productImages[0]}`}
                   alt="productImages"
                   loading="lazy"
                 />
@@ -44,7 +43,7 @@ export default function SideCart() {
           );
         })}
         {cart.length === 0 && (
-          <small style={{textAlign: "center", width: "100%"}}>
+          <small style={{ textAlign: "center", width: "100%" }}>
             cart is empty
           </small>
         )}

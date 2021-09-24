@@ -1,9 +1,10 @@
-import React, {useState} from "react";
-import {useDispatch, useSelector} from "react-redux";
-import {colors, materials, brands, sizes} from "../../utilities/dataUi.json";
-import {FETCH_FILTER, RESET_FILTER} from "../../Redux/slices/filterSlice";
+import React, { useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { colors, materials, brands, sizes } from "../../utilities/dataUi.json";
+import { FETCH_FILTER, RESET_FILTER } from "../../Redux/slices/filterSlice";
+
 export default function SpecificFilter() {
-  const {products} = useSelector(state => state.allProducts);
+  const { products } = useSelector((state) => state.allProducts);
   const dispatch = useDispatch();
   const [currentFilter, setCurrentFilter] = useState({});
 
@@ -12,12 +13,12 @@ export default function SpecificFilter() {
     dispatch(RESET_FILTER());
   };
 
-  const handleChangeFilter = e => {
+  const handleChangeFilter = (e) => {
     setCurrentFilter({
       [e.target.name]: e.target.value,
     });
 
-    const result = products.filter(item => {
+    const result = products.filter((item) => {
       return (
         item[e.target.name.toString().toLowerCase()] ===
         e.target.value.toString().toLowerCase()
@@ -58,7 +59,7 @@ export default function SpecificFilter() {
                 />
                 <label htmlFor={color}>{color}</label>
                 <span>
-                  ({products.filter(item => item.color === color).length})
+                  ({products.filter((item) => item.color === color).length})
                 </span>
               </li>
             );
@@ -69,7 +70,7 @@ export default function SpecificFilter() {
       <div className="sub-filter">
         <h4>material</h4>
         <ul className="sub-filter" id="list-materials">
-          {materials.map(material => {
+          {materials.map((material) => {
             return (
               <li className="list-group-item" key={material}>
                 <input
@@ -87,7 +88,9 @@ export default function SpecificFilter() {
                 />
                 <label htmlFor={material}>{material}</label>
                 <span>
-                  ({products.filter(item => item.material === material).length})
+                  (
+                  {products.filter((item) => item.material === material).length}
+                  )
                 </span>
               </li>
             );
@@ -98,7 +101,7 @@ export default function SpecificFilter() {
       <div className="sub-filter">
         <h4>product type</h4>
         <ul className="sub-filter" id="list-sizes">
-          {sizes.map(size => {
+          {sizes.map((size) => {
             return (
               <li className="list-group-item" key={size}>
                 <input
@@ -116,7 +119,7 @@ export default function SpecificFilter() {
                 />
                 <label htmlFor={size}>{size} mm</label>
                 <span>
-                  ({products.filter(item => item.size === size).length})
+                  ({products.filter((item) => item.size === size).length})
                 </span>
               </li>
             );
@@ -126,7 +129,7 @@ export default function SpecificFilter() {
       <div className="sub-filter">
         <h4>brand</h4>
         <ul className="sub-filter" id="list-brands">
-          {brands.map(brand => {
+          {brands.map((brand) => {
             return (
               <li className="list-group-item" key={brand}>
                 <input
@@ -147,7 +150,7 @@ export default function SpecificFilter() {
                   (
                   {
                     products.filter(
-                      item => item.brand.toLowerCase() === brand.toLowerCase()
+                      (item) => item.brand.toLowerCase() === brand.toLowerCase()
                     ).length
                   }
                   )

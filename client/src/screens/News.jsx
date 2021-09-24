@@ -2,9 +2,8 @@ import React from "react";
 import HeadPage from "../components/HeadPage/HeadPage";
 import SEO from "../components/SEO/SEO.jsx";
 import newApi from "../utilities/new-api.json";
-import {BiLink} from "react-icons/bi";
-import {Link} from "react-router-dom";
-import {API} from "../utilities/Keys.json";
+import { BiLink } from "react-icons/bi";
+import { Link } from "react-router-dom";
 import "../assets/css/News.css";
 
 export default function news() {
@@ -12,12 +11,12 @@ export default function news() {
     <SEO title="News">
       <HeadPage direction="news" />
       <div className="news">
-        {newApi.map(oneNews => {
+        {newApi.map((oneNews) => {
           return (
             <div key={oneNews._id} className="one-item">
               <div className="wrapper-img">
                 <img
-                  src={API + "/" + oneNews.imageOfArticle}
+                  src={process.env.REACT_APP_API + "/" + oneNews.imageOfArticle}
                   alt={oneNews.author}
                   loading="lazy"
                 />

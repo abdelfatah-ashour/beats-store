@@ -16,7 +16,7 @@ export default function ViewOneNews() {
             <React.Fragment key={article._id}>
               <div className="view-img">
                 <img
-                  src={API + "/" + article.imageOfArticle}
+                  src={process.env.REACT_APP_API + "/" + article.imageOfArticle}
                   alt={article.head}
                 />
               </div>
@@ -24,7 +24,7 @@ export default function ViewOneNews() {
                 <h6>👑 {article.author} </h6>
                 <h3>📢 {article.head}</h3>
                 <div
-                  dangerouslySetInnerHTML={{__html: article.content}}
+                  dangerouslySetInnerHTML={{ __html: article.content }}
                   className="content-news"
                 ></div>
               </div>

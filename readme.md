@@ -1,4 +1,4 @@
-# BOOM Headphone store
+# Beats-Store
 
 >
 
@@ -6,7 +6,7 @@
 
 >
 
-DEMO Live : 🔥 [BOOM-Store]()
+DEMO Live : 🔥 [Beats-Store]()
 
 ### 🚀 Features :
 
@@ -20,7 +20,7 @@ DEMO Live : 🔥 [BOOM-Store]()
 
 👻 state management with (Redux).
 
-👻Authenticate and Authorization.
+👻 Authenticate and Authorization.
 
 👻 Cart and Wishlist (functionality).
 

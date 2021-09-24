@@ -1,22 +1,21 @@
-import React, {useCallback, useEffect, useState} from "react";
-import {Link, useParams, useHistory} from "react-router-dom";
-import {addToCart} from "../utilities/crud_cart";
-import {addToWishlist} from "../utilities/crud_wishlist";
-import {AiOutlineHeart} from "react-icons/ai";
-import {FiShoppingCart} from "react-icons/fi";
-import {useDispatch, useSelector} from "react-redux";
-import {API} from "../utilities/Keys.json";
+import React, { useCallback, useEffect, useState } from "react";
+import { Link, useParams, useHistory } from "react-router-dom";
+import { addToCart } from "../utilities/crud_cart";
+import { addToWishlist } from "../utilities/crud_wishlist";
+import { AiOutlineHeart } from "react-icons/ai";
+import { FiShoppingCart } from "react-icons/fi";
+import { useDispatch, useSelector } from "react-redux";
 import HeadPage from "../components/HeadPage/HeadPage";
 import SEO from "../components/SEO/SEO.jsx";
 import "../assets/css/ViewProduct.css";
 
 export default function ViewProduct() {
   const dispatch = useDispatch();
-  const {productName, productId} = useParams();
+  const { productName, productId } = useParams();
   const [viewProduct, setViewProduct] = useState(null);
   const [products, setProducts] = useState([]);
   const [isSelected, setIsSelected] = useState([]);
-  const {allProducts} = useSelector(state => state);
+  const { allProducts } = useSelector((state) => state);
   const route = useHistory();
 
   const [selected, setSelected] = useState({
@@ -25,19 +24,19 @@ export default function ViewProduct() {
     material: null,
   });
 
-  const handleActiveImg = imgSrc => {
+  const handleActiveImg = (imgSrc) => {
     const mainImg = document.getElementById("mainImage");
     mainImg.src = imgSrc;
   };
 
   const handleSelect = useCallback(
-    e => {
+    (e) => {
       setSelected({
         ...selected,
         [e.target.name]: e.target.value,
       });
 
-      const result = products.filter(item => {
+      const result = products.filter((item) => {
         return (
           item.size ===
             (e.target.name === "size" ? +e.target.value : +selected.size) &&
@@ -58,10 +57,10 @@ export default function ViewProduct() {
   useEffect(() => {
     function fetchOneProduct(name) {
       try {
-        const result = allProducts.products.filter(item => {
+        const result = allProducts.products.filter((item) => {
           return item._id === productId;
         });
-        setProducts(allProducts.products.filter(item => item.name === name));
+        setProducts(allProducts.products.filter((item) => item.name === name));
         setViewProduct(result.length > 0 ? result[0] : null);
         if (result.length === 0) route.push("/products");
       } catch (error) {
@@ -83,7 +82,11 @@ export default function ViewProduct() {
             <div className="container-images">
               <div className="wrapper-img">
                 <img
-                  src={API + "/" + viewProduct?.productImages[0]}
+                  src={
+                    process.env.REACT_APP_API +
+                    "/" +
+                    viewProduct?.productImages[0]
+                  }
                   alt="main view product"
                   id="mainImage"
                   loading="lazy"
@@ -94,11 +97,13 @@ export default function ViewProduct() {
                   return (
                     <div key={i}>
                       <img
-                        src={API + "/" + image}
+                        src={process.env.REACT_APP_API + "/" + image}
                         alt={image}
                         loading="lazy"
                         onClick={() =>
-                          handleActiveImg(`${API}/${image}`)
+                          handleActiveImg(
+                            `${process.env.REACT_APP_API}/${image}`
+                          )
                         }
                       />
                     </div>
@@ -108,7 +113,7 @@ export default function ViewProduct() {
             </div>
 
             <div className="main-filter-view">
-              <h3 style={{color: "#fc846b"}}>{viewProduct?.name}</h3>
+              <h3 style={{ color: "#fc846b" }}>{viewProduct?.name}</h3>
               <div className="one-filter">
                 <div>Price</div>
                 <div>
@@ -193,7 +198,7 @@ export default function ViewProduct() {
                               ? "active"
                               : ""
                           }
-                          style={{textTransform: "uppercase"}}
+                          style={{ textTransform: "uppercase" }}
                         >
                           {color}
                         </label>

@@ -1,19 +1,18 @@
-import React, {useEffect} from "react";
+import React, { useEffect } from "react";
 import HeadPage from "../components/HeadPage/HeadPage.jsx";
 import SpecificFilter from "../components/SpecificFilter/SpecificFilter.jsx";
-import {useDispatch, useSelector} from "react-redux";
-import {fetchAllProduct} from "../Redux/slices/AllProductsSlice";
-import {slice} from "lodash";
-import {AiOutlineHeart} from "react-icons/ai";
-import {HiOutlineFilter} from "react-icons/hi";
-import {BiSearch} from "react-icons/bi";
-import {Link} from "react-router-dom";
+import { useDispatch, useSelector } from "react-redux";
+import { fetchAllProduct } from "../Redux/slices/AllProductsSlice";
+import { slice } from "lodash";
+import { AiOutlineHeart } from "react-icons/ai";
+import { HiOutlineFilter } from "react-icons/hi";
+import { BiSearch } from "react-icons/bi";
+import { Link } from "react-router-dom";
 import SEO from "../components/SEO/SEO.jsx";
-import {API} from "../utilities/Keys.json";
 import "../assets/css/Products.css";
 
 export default function Products() {
-  const {allProducts, filter} = useSelector(state => state);
+  const { allProducts, filter } = useSelector((state) => state);
   const dispatch = useDispatch();
   console.log(allProducts, filter);
   useEffect(() => {
@@ -57,9 +56,16 @@ export default function Products() {
                         </Link>
                       </div>
                     </div>
-                    <div className="wrapper-img" style={{marginBottom: "1rem"}}>
+                    <div
+                      className="wrapper-img"
+                      style={{ marginBottom: "1rem" }}
+                    >
                       <img
-                        src={API + "/" + product.productImages[0]}
+                        src={
+                          process.env.REACT_APP_API +
+                          "/" +
+                          product.productImages[0]
+                        }
                         alt={product.productImages[0]}
                       />
                       <div className="overlay"></div>
@@ -72,8 +78,8 @@ export default function Products() {
                         alignItems: "center",
                       }}
                     >
-                      <h3 style={{marginBottom: "1rem"}}>{product.name}</h3>
-                      <h6 style={{marginBottom: "1rem"}}>
+                      <h3 style={{ marginBottom: "1rem" }}>{product.name}</h3>
+                      <h6 style={{ marginBottom: "1rem" }}>
                         {product.price}
                         <strong>$</strong>
                       </h6>
@@ -100,9 +106,16 @@ export default function Products() {
                         </Link>
                       </div>
                     </div>
-                    <div className="wrapper-img" style={{marginBottom: "1rem"}}>
+                    <div
+                      className="wrapper-img"
+                      style={{ marginBottom: "1rem" }}
+                    >
                       <img
-                        src={API + "/" + product.productImages[0]}
+                        src={
+                          process.env.REACT_APP_API +
+                          "/" +
+                          product.productImages[0]
+                        }
                         alt={product.productImages[0]}
                       />
                       <div className="overlay"></div>
@@ -115,8 +128,8 @@ export default function Products() {
                         alignItems: "center",
                       }}
                     >
-                      <h3 style={{marginBottom: "1rem"}}>{product.name}</h3>
-                      <h6 style={{marginBottom: "1rem", fontSize: "18px"}}>
+                      <h3 style={{ marginBottom: "1rem" }}>{product.name}</h3>
+                      <h6 style={{ marginBottom: "1rem", fontSize: "18px" }}>
                         {product.price}
                         <strong>$</strong>
                       </h6>
