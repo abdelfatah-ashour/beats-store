@@ -6,7 +6,7 @@
 
 >
 
-DEMO Live : 🔥 [Beats-Store]()
+DEMO Live : 🔥 [Beats-Store](https://beats-store.vercel.app/)
 
 ### 🚀 Features :
 
