@@ -22,8 +22,7 @@ footer .container {
           align-items: center;
 }
 
-footer .container .main-logo,
-footer .container h3,
+footer .container h6,
 footer .container .input-subscribe,
 footer .container .social-media-list,
 footer .container .nav-link {
@@ -32,13 +31,31 @@ footer .container .nav-link {
 }
 
 footer .container .main-logo {
-  background-image: url("../../assets/imgs/logo.png");
   width: 170px;
   height: 3.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  color: #fff;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 22px;
+  line-height: 40px;
+  text-decoration: none;
 }
 
-footer .container h3 {
-  text-transform: uppercase;
+footer .container .main-logo:hover {
+  text-decoration: underline;
+}
+
+footer .container h6 {
+  text-transform: capitalize;
+  font-size: 14px;
+  word-spacing: 4px;
 }
 
 footer .container .input-subscribe {

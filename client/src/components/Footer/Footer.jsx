@@ -1,15 +1,17 @@
 import React from "react";
 import "./footer.css";
-import {Link} from "react-router-dom";
-import {FaFacebookF} from "react-icons/fa";
-import {AiFillInstagram} from "react-icons/ai";
-import {IoLogoYoutube, IoLogoTwitter} from "react-icons/io";
+import { Link } from "react-router-dom";
+import { FaFacebookF } from "react-icons/fa";
+import { AiFillInstagram } from "react-icons/ai";
+import { IoLogoYoutube, IoLogoTwitter } from "react-icons/io";
 export default function Footer() {
   return (
     <footer>
       <div className="container">
-        <Link to="/" className="main-logo"></Link>
-        <h3>subscribe now newsletter</h3>
+        <Link to="/" className="main-logo">
+          Beats store
+        </Link>
+        <h6>subscribe now newsletter</h6>
         <div className="input-subscribe">
           <input type="text" placeholder="Your Email Address" />
           <span>signup</span>

@@ -1,5 +1,5 @@
 import React from "react";
-import {Link, useHistory} from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 import ERROR from "../assets/imgs/404.svg";
 import SEO from "../components/SEO/SEO.jsx";
 
@@ -21,24 +21,29 @@ export default function PageNotFound() {
           minHeight: "100vh",
         }}
       >
-        <div className="wrapper-img" style={{width: "400px", height: "300px"}}>
+        <div
+          className="wrapper-img"
+          style={{ width: "400px", height: "300px" }}
+        >
           <img
             src={ERROR}
             alt="page not found"
             loading="lazy"
-            style={{width: "100%", height: "100%"}}
+            style={{ width: "100%", height: "100%" }}
           />
         </div>
         <div className="wrapper-content">
           <Link
             to="/"
             style={{
-              fontSize: "12px",
+              fontSize: "16px",
               textAlign: "center",
               wordBreak: "break-word",
+              color: "#000",
+              textTransform: "capitalize",
             }}
           >
-            return to Home Page ... or automatically return home page after 3sec
+            automatically return to home page after 3 seconds...
           </Link>
         </div>
       </div>

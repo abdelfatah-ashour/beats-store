@@ -11,8 +11,8 @@ footer {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    .main-logo,
-    h3,
+
+    h6,
     .input-subscribe,
     .social-media-list,
     .nav-link {
@@ -21,12 +21,23 @@ footer {
     }
 
     .main-logo {
-      background-image: url("../../assets/imgs/logo.png");
       width: 170px;
       height: 3.5rem;
+      display: flex;
+      color: #fff;
+      justify-content: center;
+      align-items: center;
+      font-size: 22px;
+      line-height: 40px;
+      text-decoration: none;
+      &:hover {
+        text-decoration: underline;
+      }
     }
-    h3 {
-      text-transform: uppercase;
+    h6 {
+      text-transform: capitalize;
+      font-size: 14px;
+      word-spacing: 4px;
     }
 
     .input-subscribe {
